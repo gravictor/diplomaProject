@@ -1,0 +1,7 @@
+.total-info {
+  flex-wrap: wrap;
+}
+.total-info__text {
+  font-weight: bold;
+  font-size: 23px;
+}

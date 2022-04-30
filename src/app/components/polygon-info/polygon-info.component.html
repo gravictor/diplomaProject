@@ -1,1 +1,5 @@
-<p>polygon-info works! {{selectedPolygon}}</p>
+<div *ngIf="selectedPolygon" class="total-info">
+  <div class="total-info__text">Локация: {{selectedPolygon.name}}</div>
+  <div class="total-info__text">Влажность: {{selectedPolygon.humidity}}</div>
+  <div class="total-info__text">Температура: {{selectedPolygon.temperature}}</div>
+</div>

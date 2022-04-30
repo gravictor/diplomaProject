@@ -1,4 +1,5 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {ContentModel} from "../../models/content.model";
 
 @Component({
   selector: 'app-polygon-info',
@@ -6,13 +7,6 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./polygon-info.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PolygonInfoComponent implements OnInit {
-
-  @Input() selectedPolygon: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class PolygonInfoComponent {
+  @Input() selectedPolygon: ContentModel | undefined;
 }
