@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
       // @ts-ignore
       this.polygons = polygonData;
 
-      this.polygons.forEach( (value, index, array) => {
+      this.polygons.forEach( (value) => {
         value.map = this.map;
         let country = new google.maps.Polygon(value)
         country.addListener("click", (e: any) => this.showArrays(e, value.id));
