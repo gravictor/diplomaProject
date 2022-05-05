@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Loader } from '@googlemaps/js-api-loader';
+import {Component, OnInit} from "@angular/core";
+import {Loader} from "@googlemaps/js-api-loader";
 import {PolygonInitialService} from "./services/polygon-initial.service";
 import {ContentModel} from "./models/content.model";
 import {PolygonModel} from "./models/polygon.model";
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let loader = new Loader({
+    const loader = new Loader({
       apiKey: this.service.getApiKey(),
     });
 
@@ -39,14 +39,14 @@ export class AppComponent implements OnInit {
 
       this.polygons.forEach( (value) => {
         value.map = this.map;
-        let country = new google.maps.Polygon(value)
+        const country = new google.maps.Polygon(value)
         country.addListener("click", (e: any) => this.showArrays(e, value.id));
       });
     })
   }
 
   showArrays(event: any, country: string): void {
-    let infoWindow = new google.maps.InfoWindow();
+    const infoWindow = new google.maps.InfoWindow();
     let contentString = '';
 
     switch (country) {

@@ -13,15 +13,14 @@ export class PolygonInitialService {
   }
 
   getContent(polygonId: string): ContentModel {
-    let result = contentData.filter(function (el){
+    const result = contentData.filter(function (el){
       return el.id == polygonId;
     })
     return result[0];
   }
 
   contentStringCreator(event: any, country: string): string {
-    let content: ContentModel;
-    content = this.getContent(country);
+    let content: ContentModel = this.getContent(country);
     return `<b>${content.name}</b><br>` +
       `<b>Влажность: ${content.humidity}</b><br>` +
       `<b>T: ${content.temperature}</b><br>` +
