@@ -1,0 +1,7 @@
+.info-dialog {
+  display: flex;
+}
+
+.info-dialog__image-lorawan {
+  height: 120px;
+}

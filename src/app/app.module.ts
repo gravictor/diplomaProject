@@ -11,12 +11,15 @@ import {MatTabsModule} from "@angular/material/tabs";
 
 import {ReactiveFormsModule} from "@angular/forms";
 import { PolygonInfoComponent } from './components/polygon-info/polygon-info.component';
+import { InfoDialogComponent } from './components/info-dialog/info-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PolygonInfoComponent,
+    InfoDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { PolygonInfoComponent } from './components/polygon-info/polygon-info.com
     MatButtonModule,
     MatTabsModule,
     ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
