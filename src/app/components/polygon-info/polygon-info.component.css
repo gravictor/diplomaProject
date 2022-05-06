@@ -1,5 +1,7 @@
 .total-info {
   flex-wrap: wrap;
+  margin-top: 5%;
+  margin-left: 5%;
 }
 .total-info__text {
   font-weight: bold;
