@@ -47,19 +47,8 @@ export class AppComponent implements OnInit {
 
   showArrays(event: any, country: string): void {
     const infoWindow = new google.maps.InfoWindow();
-    let contentString = '';
+    const contentString = this.service.contentStringCreator(event, country);
 
-    switch (country) {
-      case "turkey":
-        contentString = this.service.contentStringCreator(event, country);
-        break;
-      case "iran":
-        contentString = this.service.contentStringCreator(event, country);
-        break;
-      case "saidArabia":
-        contentString = this.service.contentStringCreator(event, country);
-        break;
-    }
     this.selectedPolygon = contentString;
     this.content = this.service.getContent(country);
 
